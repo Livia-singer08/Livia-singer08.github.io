@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    background: #1253ae; 
+    color: #333;
+}
+
+header {
+    background: #859ee2;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+}
+
+header:hover {
+    background: #7a8fe0;
+}
+
+header h1{
+    margin-bottom: 0.3rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #422086;
+    background-color: rgba(255,255,255,0.2);
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem;
+    background: #dcebf7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(0);
+}
+
+section::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #3b82f6;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2rem; 
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    position: relative;
+    font-weight: bold;
+}
+
+h2:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3b82f6;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.sobre-mim {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #422086;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.sobre-informacoes h2 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.sobre-informacoes ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sobre-informacoes ul li {
+    border: 1px solid #cce0ff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sobre-informacoes ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.formacao-lista {
+    list-style: none;
+    padding-left: 0;
+}
+
+.formacao-lista li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+    transition: transform 0.3s;
+}
+
+.formacao-lista li:hover {
+    transform: translateX(5px);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 0%, rgba(0, 123, 255, 0.2) 50%, rgba(0,0,0,0) 100%);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid rgba(59,130,246,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, #3b82f6 50%, rgba(255,255,255,0.5) 100%);
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.habilidade {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,123,255,0.2);
+    transition: 0.3s;
+}
+
+.habilidade:hover {
+    background: #9ed6f0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.habilidade i {
+    font-size: 2rem;
+    color: #50e0ed;
+    margin-bottom: 10px;
+}
+
+#contato p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+#contato i {
+    color: #b6dafa;
+    margin-right: 10px;
+}
+
+#contato a {
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#contato p:hover, #contato a:hover {
+    transform: translateX(5px);
+    color: #50e0ed;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sobre-mim {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
